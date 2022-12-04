@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 15%;
-  color:  #fff;
+  color: #fff;
 
   .list a {
     font-size: 18px;
@@ -17,7 +17,8 @@
     color: #fff;
     text-decoration: none;
   }
- .brand {
+
+  .brand {
     font-size: 24px;
     font-weight: 900;
   }
@@ -57,12 +58,14 @@
       justify-content: space-between;
 
       input {
-        border:none;
+        border: none;
         margin: 10px 20px 10px 20px;
         width: 90%;
+
         &:focus {
           outline: none;
         }
+
         &::placeholder {
           font-size: 16px;
           font-weight: 500;
@@ -75,15 +78,16 @@
         font-weight: 700;
         padding: 15px 25px;
         border: none;
-        background: linear-gradient(to right, rgba(30,213,169, 1) 0%, rgba(1,180,228, 1) 100%);
+        background: linear-gradient(to right, rgba(30, 213, 169, 1) 0%, rgba(1, 180, 228, 1) 100%);
         transition: 300ms;
-        
+
         &:hover {
           color: $dark-blue;
         }
       }
     }
   }
+
   .movies {
     margin: 20px 50px;
     display: flex;
@@ -120,7 +124,7 @@
           position: relative;
           top: -25px;
         }
-        
+
         .title {
           font-size: 18px;
           font-weight: 600;
@@ -151,20 +155,23 @@
         .btn-watch {
           background-color: $green;
           cursor: pointer;
+
           &:disabled {
             background-color: $green-light;
           }
         }
+
         .btn-watched {
           background-color: $orange;
           cursor: pointer;
+
           &:disabled {
             background-color: $orange-light;
           }
         }
       }
     }
-    
+
   }
 }
 
@@ -180,7 +187,7 @@
 
     &:hover {
       .card_icon {
-      opacity:1;
+        opacity: 1;
       }
     }
 
@@ -196,12 +203,14 @@
       left: 70px;
       color: #ddd;
       opacity: 0;
+
       i {
         margin: 10px 5px;
       }
     }
   }
 }
+
 .watch-header {
   margin: 15px 50px;
   display: flex;
@@ -211,38 +220,146 @@
     background-color: $blue;
     color: $white;
     border-radius: 8px;
-    padding: 10px ;
+    padding: 10px;
   }
 }
 
+.detail-card {
+  display: flex;
+  margin: 30px;
+
+  &_img {
+    img {
+      border-radius: 8px;
+      width: 300px;
+      min-width: 300px;
+    }
+  }
+
+  &_content {
+    margin: 0px 40px;
+
+    .title {
+      margin-top: 40px;
+
+      h1 {
+        display: inline;
+        font-weight: 900;
+        font-size: 32px;
+      }
+
+      span {
+        font-size: 28px;
+      }
+    }
+
+    .list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .average {
+      margin: 20px 20px 20px 0px;
+      display: flex;
+      align-items: center;
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        color: $white;
+        background-color: $dark-blue;
+        border-radius: 50%;
+        margin-right: 10px;
+
+        .value {
+          font-size: 26px;
+          font-weight: 700;
+        }
+      }
+
+      .desc {
+        font-size: 20px;
+      }
+    }
+
+    .desc-title {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .icon {
+      display: flex;
+
+      button {
+        width: 40px;
+        height: 40px;
+        color: $white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+      }
+      .watch {
+        background-color: $green;
+        border: 1px solid $green;
+                
+        &:disabled {
+          background-color: $green-light;
+          border-color: $green-light;
+        }
+      }
+      
+      .watched {
+        background-color: $orange;
+        border: 1px solid $orange;
+
+        &:disabled {
+          background-color: $orange-light;
+          border-color: $orange-light;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width:576px) {
   #addMovie {
     .head {
       padding: 25px 20px 20px 20px;
+
       h1 {
         font-size: 32px;
       }
+
       h2 {
         font-size: 20px;
         margin-top: 10px;
       }
+
       .search-bar {
         button {
           padding: 15px;
           font-size: 14px;
         }
+
         input::placeholder {
           font-size: 14px !important;
         }
       }
     }
 
-    .movies{
+    .movies {
       margin: 20px 15px;
 
       &-card {
         width: 155px;
+
         img {
           width: 154px;
           height: 150px;
@@ -261,8 +378,11 @@
             font-size: 10px;
           }
         }
+
         &_button {
-          .btn-watch, .btn-watched {
+
+          .btn-watch,
+          .btn-watched {
             font-size: 12px;
           }
         }
@@ -278,6 +398,7 @@
 
       &-card {
         width: 220px;
+
         img {
           width: 219px;
           height: 220px;
@@ -292,8 +413,11 @@
             font-size: 12px;
           }
         }
+
         &_button {
-          .btn-watch, .btn-watched {
+
+          .btn-watch,
+          .btn-watched {
             font-size: 14px;
           }
         }
