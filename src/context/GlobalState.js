@@ -24,12 +24,16 @@ export const GlobalProvider = (props) => {
         dispatch({type: "ADD_MOVIE_TO_WATCHED_LIST", payload: movie})
     };
 
-    const deleteMovieFromWatchList = (movieId) => {
-        dispatch({type: "DELETE_MOVIE_FROM_WATCH_LIST", payload: movieId})
+    const deleteMovieFromWatchList = (id) => {
+        dispatch({type: "DELETE_MOVIE_FROM_WATCH_LIST", payload: id})
     }
 
-    const deleteMovieFromWatchedList = (movieId) => {
-        dispatch({type: "DELETE_MOVIE_FROM_WATCHED_LIST", payload: movieId})
+    const deleteMovieFromWatchedList = (id) => {
+        dispatch({type: "DELETE_MOVIE_FROM_WATCHED_LIST", payload: id})
+    }
+
+    const moveMovieToWatchList = (movie) => {
+        dispatch({type: "MOVE_MOVIE_TO_WATCH_LIST", payload: movie})
     }
 
     return (
@@ -39,7 +43,8 @@ export const GlobalProvider = (props) => {
             addMovieToWatchList,
             addMovieToWatchedList,
             deleteMovieFromWatchList,
-            deleteMovieFromWatchedList
+            deleteMovieFromWatchedList,
+            moveMovieToWatchList
         }}>
             {props.children}
         </GlobalContext.Provider>

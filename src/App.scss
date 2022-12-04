@@ -125,6 +125,7 @@
           font-size: 18px;
           font-weight: 600;
           margin-bottom: 7px;
+          margin-top: -10px;
         }
 
         .release-date {
@@ -149,9 +150,17 @@
 
         .btn-watch {
           background-color: $green;
+          cursor: pointer;
+          &:disabled {
+            background-color: $green-light;
+          }
         }
         .btn-watched {
           background-color: $orange;
+          cursor: pointer;
+          &:disabled {
+            background-color: $orange-light;
+          }
         }
       }
     }
@@ -174,7 +183,7 @@
       opacity:1;
       }
     }
-    
+
     &_img {
       width: 200px;
       height: 200px;
@@ -193,10 +202,20 @@
     }
   }
 }
+.watch-header {
+  margin: 15px 50px;
+  display: flex;
+  justify-content: space-between;
 
-.title {
-  margin: 15px 25px;
+  &_movie-lenght {
+    background-color: $blue;
+    color: $white;
+    border-radius: 8px;
+    padding: 10px ;
+  }
 }
+
+
 @media screen and (max-width:576px) {
   #addMovie {
     .head {

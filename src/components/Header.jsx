@@ -5,10 +5,10 @@ const Header = () => {
   return (
     <header className="header">
       <span className="brand">
-        <Link to={"/"}>İzlenecekler</Link>
+        <Link to={"/"}>Watch</Link>
       </span>
       <div className="list">
-        <Link to={"/watched"}>İzlenenler</Link>
+        <Link to={"/watched"}>Watched</Link>
         <Link to={"/add"}><i className="fas fa-plus plus-icon"></i></Link>
       </div>
     </header>
