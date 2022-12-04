@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Helmet from "./Helmet";
-import Card from "./Card";
+import ResultCard from "./ResultCard";
 
 const AddMovie = () => {
     const [query, setQuery] = useState("");
@@ -31,7 +31,7 @@ const AddMovie = () => {
                     <div className="movies">
                         {movies &&movies.map(movie => (
                             <div className="movies-card" key={movie.id}>
-                               <Card movie={movie} />
+                               <ResultCard movie={movie} />
                             </div>
                         ))}
                     </div>

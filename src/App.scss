@@ -1,11 +1,4 @@
-$dark-blue: rgb(3,37,65);
-$green: #79bda1;
-$orange: #f69f84;
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
+@import "../src/styles/common.scss";
 
 .header {
   background-color: $dark-blue;
@@ -92,7 +85,7 @@ $orange: #f69f84;
     }
   }
   .movies {
-    margin: 20px 0px;
+    margin: 20px 50px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -116,6 +109,7 @@ $orange: #f69f84;
       &_desc {
         margin: 10px;
         height: 175px;
+
         .vote {
           background-color: $dark-blue;
           border-radius: 50%;
@@ -163,5 +157,128 @@ $orange: #f69f84;
     }
     
   }
+}
 
+.watch-list {
+  margin: 3% 5%;
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .card {
+    position: relative;
+
+    &:hover {
+      .card_icon {
+      opacity:1;
+      }
+    }
+    
+    &_img {
+      width: 200px;
+      height: 200px;
+      border-radius: 5px;
+    }
+
+    &_icon {
+      position: absolute;
+      bottom: 0px;
+      left: 70px;
+      color: #ddd;
+      opacity: 0;
+      i {
+        margin: 10px 5px;
+      }
+    }
+  }
+}
+
+.title {
+  margin: 15px 25px;
+}
+@media screen and (max-width:576px) {
+  #addMovie {
+    .head {
+      padding: 25px 20px 20px 20px;
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      .search-bar {
+        button {
+          padding: 15px;
+          font-size: 14px;
+        }
+        input::placeholder {
+          font-size: 14px !important;
+        }
+      }
+    }
+
+    .movies{
+      margin: 20px 15px;
+
+      &-card {
+        width: 155px;
+        img {
+          width: 154px;
+          height: 150px;
+        }
+
+        &_desc {
+          height: 145px;
+          margin-top: 0px;
+
+          .title {
+            font-size: 14px;
+            margin-bottom: 0px;
+          }
+
+          .release-date {
+            font-size: 10px;
+          }
+        }
+        &_button {
+          .btn-watch, .btn-watched {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:376px) {
+  #addMovie {
+    .movies {
+
+      &-card {
+        width: 220px;
+        img {
+          width: 219px;
+          height: 220px;
+        }
+
+        &_desc {
+          .title {
+            font-size: 16px;
+          }
+
+          .release-date {
+            font-size: 12px;
+          }
+        }
+        &_button {
+          .btn-watch, .btn-watched {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
 }
