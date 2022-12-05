@@ -18,7 +18,7 @@ const ResultCard = ({ movie }) => {
   const handleClick = (e) => {
     e.preventDefault();
     setMovie(movie);
-    navigate(`/${movie.title}`);
+    navigate(`/movie/${movie.title}`);
   }
 
   return (

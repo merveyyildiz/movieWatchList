@@ -7,6 +7,7 @@ import WatchList from './components/WatchList';
 import AddMovie from './components/AddMovie';
 import { GlobalProvider } from './context/GlobalState';
 import DetailCard from './components/DetailCard';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
             <Route path='/' element={<WatchList />} />
             <Route path='/watched' element={<WatchedList />} />
             <Route path='/add' element={<AddMovie />} />
-            <Route path='/:title' element={<DetailCard />} />
+            <Route path='/movie/:title' element={<DetailCard />} />
+            <Route path='*' element={<NotFound />}/>
           </Routes>
         </BrowserRouter>
       </GlobalProvider>
