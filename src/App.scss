@@ -111,6 +111,7 @@
         border-top-right-radius: 5px;
         width: 170px;
         height: 200px;
+        cursor: pointer;
       }
 
       &_desc {
@@ -199,17 +200,24 @@
       width: 200px;
       height: 200px;
       border-radius: 5px;
+      cursor: pointer;
     }
 
     &_icon {
       position: absolute;
       bottom: 0px;
       left: 70px;
-      color: #ddd;
+      color: #bbb;
       opacity: 0;
-
+      cursor: pointer;
       i {
+        font-size: 14px;
         margin: 10px 5px;
+        transition: 300ms;
+        &:hover {
+          font-size: 18px;
+          color: $green;
+        }
       }
     }
   }
