@@ -23,6 +23,12 @@ const WatchList = () => {
                 </div>
                 
             }
+            {
+                watchList.length === 0 &&
+                <div className="watch-list">
+                    <p>There is no movie to list.</p>
+                </div>
+            }
         </Helmet>
     )
 }

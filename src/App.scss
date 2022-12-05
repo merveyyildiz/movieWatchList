@@ -8,9 +8,12 @@
   padding: 20px 15%;
   color: #fff;
 
-  .list a {
-    font-size: 18px;
-    font-weight: 600;
+  .list  {
+    margin-top: 5px;
+    a {
+      font-size: 18px;
+      font-weight: 600;
+    }
   }
 
   a {
@@ -36,7 +39,7 @@
     color: #fff;
     background-image: url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/2Sm3asuwKVNTzgm2nF6hp5mwEfh.jpg");
     background-size: cover;
-    background-position: top center;
+    background-position: top right;
     padding: 55px 50px 50px 50px;
 
     h1 {
@@ -184,7 +187,8 @@
 
   .card {
     position: relative;
-
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 200px;
     &:hover {
       .card_icon {
         opacity: 1;
@@ -332,7 +336,8 @@
   #addMovie {
     .head {
       padding: 25px 20px 20px 20px;
-
+      min-height: 230px;
+      height: 230px;
       h1 {
         font-size: 32px;
       }
@@ -343,6 +348,7 @@
       }
 
       .search-bar {
+        margin-top: 40px;
         button {
           padding: 15px;
           font-size: 14px;
@@ -387,6 +393,25 @@
           }
         }
       }
+    }
+  }
+  .watch-list {
+    justify-content: center;
+    .card {
+      height: 150px;
+        &_img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+  .watch-header {
+    margin: 15px 20px;
+    &_title {
+      font-size: 26px;
+    }
+    &_movie-lenght {
+      font-size: 12px;
     }
   }
 }
